@@ -1,21 +1,27 @@
-//
-//  ContentView.swift
-//  SwiftUITutorial
-//
-//  Created by 橋本純一 on 2023/11/20.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    @State var notificaton = false
+    @State var watch = false
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Image("orechan")
         }
-        .padding()
+        List {
+            HStack {
+                Text("通知を設定")
+                // Toggleを右端に寄せる
+                Spacer()
+                Toggle("切り替え", isOn: $notificaton)
+            }
+            HStack {
+                Text("めざましを設定")
+                // Toggleを右端に寄せる
+                Spacer()
+                Toggle("切り替え", isOn: $watch)
+            }
+        }
     }
 }
 

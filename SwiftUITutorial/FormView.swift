@@ -1,8 +1,14 @@
-//
-//  FormView.swift
-//  SwiftUITutorial
-//
-//  Created by 橋本純一 on 2023/11/23.
-//
+import SwiftUI
 
-import Foundation
+struct FormView: View {
+
+var body: some View {
+    
+}
+}
+
+struct FormView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
