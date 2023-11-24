@@ -154,3 +154,36 @@ struct ContentView_Previews: PreviewProvider {
 ```
 
 <img src="./img/switch.png" width="300" alt="img.png">
+
+## Rectangle & Circle
+四角い図形を配置するには、Rectangleを使います。丸い図形を配置するには、Circleを使います。それぞれ、frameでサイズを指定します。
+
+```swift
+import SwiftUI
+
+struct ContentView: View {
+    @State var notificaton = false
+    @State var watch = false
+
+    var body: some View {
+        VStack {
+            // 四角い図形を配置
+            Rectangle()
+                .foregroundColor(.blue)
+                .frame(width: 200, height: 200)
+            // 丸の図形を配置
+            Circle()
+                .foregroundColor(.green)
+                .frame(width: 200, height: 200)
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+```
+
+<img src="./img/object.png" width="300" alt="img.png">

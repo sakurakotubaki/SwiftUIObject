@@ -6,21 +6,14 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Image("orechan")
-        }
-        List {
-            HStack {
-                Text("通知を設定")
-                // Toggleを右端に寄せる
-                Spacer()
-                Toggle("切り替え", isOn: $notificaton)
-            }
-            HStack {
-                Text("めざましを設定")
-                // Toggleを右端に寄せる
-                Spacer()
-                Toggle("切り替え", isOn: $watch)
-            }
+            // 四角い図形を配置
+            Rectangle()
+                .foregroundColor(.blue)
+                .frame(width: 200, height: 200)
+            // 丸の図形を配置
+            Circle()
+                .foregroundColor(.green)
+                .frame(width: 200, height: 200)
         }
     }
 }
